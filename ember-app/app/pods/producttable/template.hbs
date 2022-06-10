@@ -34,36 +34,4 @@
   </tbody>
  </table>
 
- {{!-- <tbody class='{{if usered "red" "blue"}}'>
-       {{#each products as |product index|}}
-     <tr>
-     <th scope="row">{{product.id}}</th>
-       <input id="toggle1" type="checkbox" {{action 'changeColor'}}>
-     
-     {{!-- <div  class="{{if usered "red" "blue"}}"></div> --}}
-     {{!-- <td><input type="checkbox" class ="usered" checked></td> --}}
-   
-     
-    {{!-- {{#if (eq input 'checked')}} --}}
-      {{!-- <td>{{product.productName}}</td>
-      <td>{{product.description}}</td>
-      <td>{{product.price}}</td>
-      <td>{{product.type}}</td>
-      {{#if  (eq product.type 'Apparel')}}
-      {{else}}
-      <td><button type="button" class="delete btn btn-success" onclick={{action 'delete' index}}>Delete</button></td>
-      {{/if}}
-    </tr>
-    {{/each}} --}}
-     {{!-- {{/if}} --}}
-    
-  {{!-- </tbody>
-</table> --}}
- 
-
-
-
-
-
-
 {{outlet}}
