@@ -1,0 +1,69 @@
+<h2> PRODUCTLISTTABLE </h2>
+{{name}}
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr class="heading">
+      <th scope="col">id</th>
+      <th scope="col">select</th>
+      <th scope="col">name</th>
+      <th scope="col">description</th>
+      <th scope="col">price</th>
+      <th scope="col">type</th>
+      
+    </tr>
+  </thead>
+  <tbody class='{{if usered "red" "blue"}}'>
+       {{#each products as |product index|}}
+     <tr>
+     <td scope="row">{{product.id}}</td>
+      <td><input id="toggle1" type="checkbox" {{action 'changeColor'}}></td>
+      <td>{{product.name}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.type}}</td>
+      {{#if  (eq product.type 'Apparel')}}
+      {{else}}
+      <td><button type="button" class="delete btn btn-info" onclick={{action 'delete' index}}>Delete</button></td>
+      {{/if}}
+    </tr>
+    {{/each}}
+      {{!-- <td><button type="button" class="btn btn-info" onclick={{action 'delete' index}}>Delete</button>
+</td> --}}
+    
+  </tbody>
+ </table>
+
+ {{!-- <tbody class='{{if usered "red" "blue"}}'>
+       {{#each products as |product index|}}
+     <tr>
+     <th scope="row">{{product.id}}</th>
+       <input id="toggle1" type="checkbox" {{action 'changeColor'}}>
+     
+     {{!-- <div  class="{{if usered "red" "blue"}}"></div> --}}
+     {{!-- <td><input type="checkbox" class ="usered" checked></td> --}}
+   
+     
+    {{!-- {{#if (eq input 'checked')}} --}}
+      {{!-- <td>{{product.productName}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.type}}</td>
+      {{#if  (eq product.type 'Apparel')}}
+      {{else}}
+      <td><button type="button" class="delete btn btn-success" onclick={{action 'delete' index}}>Delete</button></td>
+      {{/if}}
+    </tr>
+    {{/each}} --}}
+     {{!-- {{/if}} --}}
+    
+  {{!-- </tbody>
+</table> --}}
+ 
+
+
+
+
+
+
+{{outlet}}

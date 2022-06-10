@@ -1,0 +1,30 @@
+
+@import "ember-cli-bootstrap-4/bootstrap";
+body {
+    background-color: rgb(123, 228, 228);
+     color:rgb(6, 25, 65);
+    font-family: sans-serif;
+    text-align:center;
+    
+}
+.table{
+    color:rgb(91, 29, 110);
+    border-color: rgb(56, 48, 48)
+}
+h2 {
+font-weight: lighter;
+color:rgb(14, 97, 90)
+}
+
+.training-basic{
+    color:rgb(5, 15, 11);
+    font-size: x-large;
+}
+.table-bordered{
+    
+    border-width: 2px;
+    align-items: center;
+}
+.heading {
+    color:rgb(18, 47, 209)
+}
